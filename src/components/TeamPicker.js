@@ -97,7 +97,7 @@ export function TeamPicker(props) {
         text += overallDetail.teamName + " : ";
 
         overallDetail.players.map((player, index) => {
-          text += index === 0 ? `${player.name}` : `, ${player.name}`;
+          text += index === 0 ? `${player.name} (C)` : `, ${player.name}`;
         });
 
         exportText.push(text);

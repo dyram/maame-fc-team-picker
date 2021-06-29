@@ -55,8 +55,10 @@ export function Team(props) {
                     }
                   />
                 }
-                title={player.name}
-                description={player.position}
+                title={player.name ? player.name : "Not Specified"}
+                description={
+                  player.position ? player.position : "Not Specified"
+                }
               />
             </List.Item>
           )}
