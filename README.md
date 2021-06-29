@@ -21,6 +21,8 @@ _Hint : If you cannot understand this simple JSON, write a mail to **dyrammeyn@g
 3. **players** (datatype : Array(JSON)) : This is the same as the team's JSON structure specifying the player's details. The _image_ field should be populated with the URL of an image that is hosted online.
 4. **sequence** (datatype : Array(Integers)) : _This is an optional field_. This field can be used to specify the order in which the teams get to pick their player. Start the sequence with 0.
 
+---
+
 This is a CRA app so you need to have the following down in your system to run the development environment on your lap. They are,
 
 1. **Node JS** & **Node Package Manager**, [Click on this link to know more](https://nodejs.org/en/download/).

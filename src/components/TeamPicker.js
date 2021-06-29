@@ -29,7 +29,7 @@ export function TeamPicker(props) {
   const [lastPickedPlayer, setLastPickedPlayer] = useState({});
   //modal state -- for export
   const [exportVisible, setExportVisible] = useState(false);
-  const [exportText, setExportText] = useState([]);
+  const [exportText, setExportText] = useState({});
 
   const selectPlayer = (player, team) => {
     if (!findIfPlayerSelected(player)) {
@@ -100,7 +100,7 @@ export function TeamPicker(props) {
           text += index === 0 ? `${player.name} (C)` : `, ${player.name}`;
         });
 
-        exportText.push(text);
+        exportText[overallDetail.teamName].text = text;
         setExportVisible(true);
       });
     } else {
@@ -114,6 +114,7 @@ export function TeamPicker(props) {
   useEffect(() => {
     data.teams.map((team) => {
       pickedPlayers[team.name] = { teamName: team.name, players: [] };
+      exportText[team.name] = { teamName: team.name, text: "" };
     });
 
     if (data.sequence.length > 0) {
@@ -135,11 +136,21 @@ export function TeamPicker(props) {
         onCancel={(e) => setExportVisible(false)}
         width={800}
       >
-        <Paragraph copyable={{ text: exportText.map((text) => text + "\n") }}>
+        <Paragraph
+          copyable={{
+            text: Object.values(exportText).map(
+              (exportDetails) => exportDetails.text + "\n"
+            ),
+          }}
+        >
           Copy this text and send to your mates via Whatsapp
         </Paragraph>
         <Paragraph>
-          <pre>{exportText.map((text) => text + "\n")}</pre>
+          <pre>
+            {Object.values(exportText).map(
+              (exportDetails) => exportDetails.text + "\n"
+            )}
+          </pre>
         </Paragraph>
       </Modal>
       {/* Export Modal -- end */}
