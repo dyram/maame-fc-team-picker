@@ -26,6 +26,11 @@
       "position": "Sunni"
     },
     {
+      "name": "Harish",
+      "image": "https://media-exp3.licdn.com/dms/image/C5103AQH5WppD6Z5A1A/profile-displayphoto-shrink_200_200/0/1569495834773?e=1630540800&v=beta&t=nkby2I7W7_8vMwduZIybn6fRGXuwM6GEn2oQ0Q2M9ag",
+      "position": "Forward"
+    },
+    {
       "name": "Benji",
       "image": "https://media-exp3.licdn.com/dms/image/C4E03AQGiVk5uoqn8Kg/profile-displayphoto-shrink_200_200/0/1604999781153?e=1629331200&v=beta&t=8pdF05R1U1tPiEOUteMAdJ-gWfzRWtoDo91miLyINT8",
       "position": "Forward"
@@ -91,9 +96,14 @@
       "position": "GK / Midfielder"
     },
     {
-      "name": "Harish",
-      "image": "https://media-exp3.licdn.com/dms/image/C5103AQH5WppD6Z5A1A/profile-displayphoto-shrink_200_200/0/1569495834773?e=1630540800&v=beta&t=nkby2I7W7_8vMwduZIybn6fRGXuwM6GEn2oQ0Q2M9ag",
-      "position": "Forward"
+      "name": "Mannan",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVdwoOjy3FXBf0E5GBpikRs7DnqZBK7-e85Q&usqp=CAU",
+      "position": "Midfielder"
+    },
+    {
+      "name": "Nishanth",
+      "image": "",
+      "position": "Midfielder"
     }
   ],
   "playersPerTeam": 6,

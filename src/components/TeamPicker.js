@@ -7,6 +7,8 @@ import {
   Avatar,
   Modal,
   Button,
+  Divider,
+  Affix,
   notification,
 } from "antd";
 import { CheckCircleTwoTone } from "@ant-design/icons";
@@ -14,13 +16,19 @@ import { CheckCircleTwoTone } from "@ant-design/icons";
 //Components
 import { Team } from "./teamComponents/Team";
 
+//hooks
+import useWindowDimensions from "../hooks/useWindowDimensions";
+
 export function TeamPicker(props) {
   const { data } = props;
   const { Title, Text, Paragraph } = Typography;
   const { Meta } = Card;
+  const { width } = useWindowDimensions();
 
   const [pickedPlayers, setPickedPlayers] = useState({});
   const [selectedPlayers, setSelectedPlayers] = useState({});
+  //for affix team selector text
+  const [top, setTop] = useState(70);
   //team to select referenced to by index
   const [sequenceArr, setSequenceArr] = useState([]);
   const [teamToSelect, setTeamToSelect] = useState(0);
@@ -134,21 +142,23 @@ export function TeamPicker(props) {
         visible={exportVisible}
         footer={[]}
         onCancel={(e) => setExportVisible(false)}
-        width={800}
+        // width={width < 576 ? 300 : width < 800 ? 600 : 800}
+        width={width < 576 ? 300 : 700}
       >
         <Paragraph
           copyable={{
             text: Object.values(exportText).map(
-              (exportDetails) => exportDetails.text + "\n"
+              (exportDetails) => exportDetails.text + "\n\n"
             ),
           }}
+          style={width < 576 && { fontSize: "x-small" }}
         >
           Copy this text and send to your mates via Whatsapp
         </Paragraph>
         <Paragraph>
-          <pre>
+          <pre style={width < 576 ? { fontSize: "x-small" } : {}}>
             {Object.values(exportText).map(
-              (exportDetails) => exportDetails.text + "\n"
+              (exportDetails) => exportDetails.text + "\n\n"
             )}
           </pre>
         </Paragraph>
@@ -161,9 +171,9 @@ export function TeamPicker(props) {
         visible={pickVisible}
         footer={[]}
         onCancel={(e) => setPickVisible(false)}
-        width={700}
+        width={width < 576 ? 300 : 700}
       >
-        <Text style={{ fontSize: "large" }}>
+        <Text style={{ fontSize: width < 576 ? "small" : "large" }}>
           {`With the No.${Object.keys(selectedPlayers).length} Pick, ${
             data.teams[
               teamToSelect === 0 ? data.teams.length - 1 : teamToSelect - 1
@@ -200,7 +210,15 @@ export function TeamPicker(props) {
       {/* TeamRow -- start */}
       <Row style={{ padding: "1% 2%" }}>
         {data.teams.map((team, index) => (
-          <Col span={data.teams.length ? parseInt(24 / data.teams.length) : 8}>
+          <Col
+            span={
+              width < 576
+                ? 24
+                : data.teams.length
+                ? parseInt(24 / data.teams.length)
+                : 8
+            }
+          >
             <Team
               name={team.name ? team.name : "NewTeam"}
               manager={team.manager ? team.manager : "None"}
@@ -212,31 +230,52 @@ export function TeamPicker(props) {
               currentTeam={index}
               unpick={(player, teamIndex) => unpickPlayer(player, teamIndex)}
             />
+            {width < 576 && <Divider />}
           </Col>
         ))}
       </Row>
       {/* TeamRow -- end */}
 
-      <Row style={{ margin: "0% 3%" }}>
-        <Col span={12}>
-          <Title level={4} style={{ margin: "1%" }}>
-            {data.teams[teamToSelect].name} pick your baller...
-          </Title>
-        </Col>
-        <Col span={12}>
-          <div style={{ textAlign: "right" }}>
-            <Button type="primary" onClick={(e) => setExportTeam()}>
-              Export Teams
-            </Button>
-          </div>
-        </Col>
-      </Row>
+      <Affix offsetTop={top}>
+        <Row
+          justify="space-around"
+          align="middle"
+          style={{
+            margin: "0% 3%",
+            background: "black",
+            padding: width < 576 ? "0% 3%" : "0%",
+          }}
+        >
+          <Col span={12}>
+            <Title level={width < 576 ? 5 : 4} style={{ margin: "1%" }}>
+              {data.teams[teamToSelect].name} pick your baller...
+            </Title>
+          </Col>
+          <Col span={12}>
+            <div style={{ textAlign: "right" }}>
+              <Button
+                size={width < 576 ? "small" : "middle"}
+                type="primary"
+                onClick={(e) => setExportTeam()}
+              >
+                Export Teams
+              </Button>
+            </div>
+          </Col>
+        </Row>
+      </Affix>
 
       {/* PickingPart -- start  */}
       <Row style={{ padding: "1% 2%" }}>
         {data.players.map((player) => (
           <Col
-            span={data.players.length ? parseInt(24 / data.teams.length) : 4}
+            span={
+              width < 576
+                ? 24
+                : data.players.length
+                ? parseInt(24 / data.teams.length)
+                : 4
+            }
             onClick={(e) => {
               selectPlayer(player, teamToSelect);
             }}
@@ -259,7 +298,7 @@ export function TeamPicker(props) {
               <Meta
                 avatar={
                   <Avatar
-                    size={64}
+                    size={width < 576 ? 44 : 64}
                     src={
                       player.image
                         ? player.image

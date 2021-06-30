@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout } from "antd";
+import { Layout, BackTop } from "antd";
 
 //components
 import { HeaderComp } from "../components/Header";
@@ -12,7 +12,8 @@ export function PageLayout(props) {
 
   return (
     <Layout>
-      <Header>
+      <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
+        <BackTop />
         <HeaderComp data={data} />
       </Header>
       <Content>
