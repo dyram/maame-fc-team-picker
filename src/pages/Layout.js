@@ -4,6 +4,7 @@ import { Layout } from "antd";
 //components
 import { HeaderComp } from "../components/Header";
 import { TeamPicker } from "../components/TeamPicker";
+import { Copyright } from "../components/Copyright";
 
 export function PageLayout(props) {
   const { data } = props;
@@ -17,6 +18,9 @@ export function PageLayout(props) {
       <Content>
         <TeamPicker data={data} />
       </Content>
+      <Footer>
+        <Copyright data={data} />
+      </Footer>
     </Layout>
   );
 }
