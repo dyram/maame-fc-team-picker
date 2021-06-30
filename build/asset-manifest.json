@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.d75465fd.chunk.css",
-    "main.js": "/static/js/main.b05a307f.chunk.js",
-    "main.js.map": "/static/js/main.b05a307f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.21a40fd2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.21a40fd2.js.map",
-    "static/css/2.b0a45ffd.chunk.css": "/static/css/2.b0a45ffd.chunk.css",
-    "static/js/2.b455e9de.chunk.js": "/static/js/2.b455e9de.chunk.js",
-    "static/js/2.b455e9de.chunk.js.map": "/static/js/2.b455e9de.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.b0a45ffd.chunk.css.map": "/static/css/2.b0a45ffd.chunk.css.map",
-    "static/css/main.d75465fd.chunk.css.map": "/static/css/main.d75465fd.chunk.css.map",
-    "static/js/2.b455e9de.chunk.js.LICENSE.txt": "/static/js/2.b455e9de.chunk.js.LICENSE.txt",
-    "static/media/Maame.695a12dd.png": "/static/media/Maame.695a12dd.png"
+    "main.css": "/team-picker/build/static/css/main.d75465fd.chunk.css",
+    "main.js": "/team-picker/build/static/js/main.b05a307f.chunk.js",
+    "main.js.map": "/team-picker/build/static/js/main.b05a307f.chunk.js.map",
+    "runtime-main.js": "/team-picker/build/static/js/runtime-main.025228d0.js",
+    "runtime-main.js.map": "/team-picker/build/static/js/runtime-main.025228d0.js.map",
+    "static/css/2.b0a45ffd.chunk.css": "/team-picker/build/static/css/2.b0a45ffd.chunk.css",
+    "static/js/2.2520cb2e.chunk.js": "/team-picker/build/static/js/2.2520cb2e.chunk.js",
+    "static/js/2.2520cb2e.chunk.js.map": "/team-picker/build/static/js/2.2520cb2e.chunk.js.map",
+    "index.html": "/team-picker/build/index.html",
+    "static/css/2.b0a45ffd.chunk.css.map": "/team-picker/build/static/css/2.b0a45ffd.chunk.css.map",
+    "static/css/main.d75465fd.chunk.css.map": "/team-picker/build/static/css/main.d75465fd.chunk.css.map",
+    "static/js/2.2520cb2e.chunk.js.LICENSE.txt": "/team-picker/build/static/js/2.2520cb2e.chunk.js.LICENSE.txt",
+    "static/media/Maame.695a12dd.png": "/team-picker/build/static/media/Maame.695a12dd.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.21a40fd2.js",
+    "static/js/runtime-main.025228d0.js",
     "static/css/2.b0a45ffd.chunk.css",
-    "static/js/2.b455e9de.chunk.js",
+    "static/js/2.2520cb2e.chunk.js",
     "static/css/main.d75465fd.chunk.css",
     "static/js/main.b05a307f.chunk.js"
   ]
