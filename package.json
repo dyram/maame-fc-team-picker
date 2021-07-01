@@ -2,7 +2,7 @@
   "name": "maame-team-picker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dyram.github.io/team-picker/build/",
+  "homepage": "https://dyram.github.io/team-picker/",
   "dependencies": {
     "@ant-design/icons": "4.0.0",
     "@testing-library/jest-dom": "^5.11.4",

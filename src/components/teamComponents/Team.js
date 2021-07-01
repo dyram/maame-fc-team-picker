@@ -53,13 +53,14 @@ export function Team(props) {
             <List.Item
               key={player.name}
               actions={
-                players[0].name === player.name
+                players[0].name === player.name ||
+                players[1].name === player.name
                   ? [
                       <Avatar
                         size={width < 576 ? 22 : 34}
                         style={{ backgroundColor: "darkgreen" }}
                       >
-                        C
+                        {players[0].name === player.name ? "C" : "VC"}
                       </Avatar>,
                       <Tooltip title="Unpick Player">
                         <Button
