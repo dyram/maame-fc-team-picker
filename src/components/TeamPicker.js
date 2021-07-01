@@ -39,6 +39,12 @@ export function TeamPicker(props) {
   const [exportVisible, setExportVisible] = useState(false);
   const [exportText, setExportText] = useState({});
 
+  const selectCaptain = (player, team) => {
+    //Updating the store
+    pickedPlayers[data.teams[team].name].players.push(player);
+    selectedPlayers[player.name] = player;
+  };
+
   const selectPlayer = (player, team) => {
     if (!findIfPlayerSelected(player)) {
       //Set the modal data
@@ -119,10 +125,20 @@ export function TeamPicker(props) {
     }
   };
 
+  const findPlayer = (playerName) => {
+    let playerReturned = data.players.filter(
+      (player) => player.name === playerName
+    );
+    return playerReturned[0];
+  };
+
   useEffect(() => {
-    data.teams.map((team) => {
+    data.teams.map((team, index) => {
       pickedPlayers[team.name] = { teamName: team.name, players: [] };
       exportText[team.name] = { teamName: team.name, text: "" };
+      if (team.captain) {
+        selectCaptain(findPlayer(team.captain), index);
+      }
     });
 
     if (data.sequence.length > 0) {

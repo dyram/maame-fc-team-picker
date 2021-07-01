@@ -52,17 +52,37 @@ export function Team(props) {
           renderItem={(player) => (
             <List.Item
               key={player.name}
-              actions={[
-                <Tooltip title="Unpick Player">
-                  <Button
-                    type="primary"
-                    shape="circle"
-                    icon={<DeleteOutlined />}
-                    size={width < 576 ? "small" : "middle"}
-                    onClick={(e) => unpick(player, currentTeam)}
-                  />
-                </Tooltip>,
-              ]}
+              actions={
+                players[0].name === player.name
+                  ? [
+                      <Avatar
+                        size={34}
+                        style={{ backgroundColor: "darkgreen" }}
+                      >
+                        C
+                      </Avatar>,
+                      <Tooltip title="Unpick Player">
+                        <Button
+                          type="primary"
+                          shape="circle"
+                          icon={<DeleteOutlined />}
+                          size={width < 576 ? "small" : "middle"}
+                          onClick={(e) => unpick(player, currentTeam)}
+                        />
+                      </Tooltip>,
+                    ]
+                  : [
+                      <Tooltip title="Unpick Player">
+                        <Button
+                          type="primary"
+                          shape="circle"
+                          icon={<DeleteOutlined />}
+                          size={width < 576 ? "small" : "middle"}
+                          onClick={(e) => unpick(player, currentTeam)}
+                        />
+                      </Tooltip>,
+                    ]
+              }
             >
               <List.Item.Meta
                 key={player.name}

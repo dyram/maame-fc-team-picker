@@ -3,15 +3,18 @@
   "teams": [
     {
       "name": "Team1",
-      "manager": "Mohamed Azeem (Cow)"
+      "manager": "Mohamed Azeem (Cow)",
+      "captain": "Sharada"
     },
     {
       "name": "Team2",
-      "manager": "Titus Anto"
+      "manager": "Titus Anto",
+      "captain": "Santy"
     },
     {
       "name": "Team3",
-      "manager": "Ram Baadu"
+      "manager": "Ram Baadu",
+      "captain": "Harish"
     }
   ],
   "players": [

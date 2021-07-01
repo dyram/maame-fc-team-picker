@@ -12,7 +12,7 @@ export function PageLayout(props) {
 
   return (
     <Layout>
-      <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
+      <Header>
         <BackTop />
         <HeaderComp data={data} />
       </Header>
