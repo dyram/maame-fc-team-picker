@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/team-picker/static/css/main.d75465fd.chunk.css",
-    "main.js": "/team-picker/static/js/main.83aa1006.chunk.js",
-    "main.js.map": "/team-picker/static/js/main.83aa1006.chunk.js.map",
+    "main.js": "/team-picker/static/js/main.fc2e8617.chunk.js",
+    "main.js.map": "/team-picker/static/js/main.fc2e8617.chunk.js.map",
     "runtime-main.js": "/team-picker/static/js/runtime-main.01ec9a0a.js",
     "runtime-main.js.map": "/team-picker/static/js/runtime-main.01ec9a0a.js.map",
     "static/css/2.b0a45ffd.chunk.css": "/team-picker/static/css/2.b0a45ffd.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.b0a45ffd.chunk.css",
     "static/js/2.9726379f.chunk.js",
     "static/css/main.d75465fd.chunk.css",
-    "static/js/main.83aa1006.chunk.js"
+    "static/js/main.fc2e8617.chunk.js"
   ]
 }
