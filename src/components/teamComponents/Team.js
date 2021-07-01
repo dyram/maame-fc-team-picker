@@ -56,7 +56,7 @@ export function Team(props) {
                 players[0].name === player.name
                   ? [
                       <Avatar
-                        size={34}
+                        size={width < 576 ? 22 : 34}
                         style={{ backgroundColor: "darkgreen" }}
                       >
                         C
