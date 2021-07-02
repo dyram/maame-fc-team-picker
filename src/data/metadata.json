@@ -50,7 +50,7 @@
     },
     {
       "name": "Shreyans",
-      "image": "",
+      "image": "https://i.ibb.co/Rym2M5d/ToDel5.png",
       "position": "Defender"
     },
     {
@@ -60,7 +60,7 @@
     },
     {
       "name": "Joshua",
-      "image": "",
+      "image": "https://i.ibb.co/jfH9RY5/ToDel4.png",
       "position": "Midfielder"
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "name": "Naveen CR7",
-      "image": "",
+      "image": "https://i.ibb.co/x1FM3GV/ToDel3.png",
       "position": "Free Kick Expert"
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "name": "Kelwin",
-      "image": "",
+      "image": "https://i.ibb.co/5KzBVNS/ToDel2.png",
       "position": "GK / Defender"
     },
     {
@@ -104,8 +104,8 @@
       "position": "Midfielder"
     },
     {
-      "name": "Nishanth",
-      "image": "",
+      "name": "Noah",
+      "image": "https://i.ibb.co/FHD3YHG/ToDel1.png",
       "position": "Midfielder"
     }
   ],
